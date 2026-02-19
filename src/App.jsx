@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import QueueForm from "./components/QueueForm";
+import QueueDisplay from "./components/QueueDisplay";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="bg-black h-screen text-white">
+        <div className=" text-blue-400 flex items-center justify-center flex-col p-30 ">
+          <h1 className="text-5xl font-bold  ">Queue Management System</h1>
+          <p className="text-zinc-300 p-3 text-2xl">
+            Manage Your Customer Efficiently{" "}
+          </p>
+        </div>
+        <div className="flex items-center justify-evenly ">
+          {" "}
+          <QueueForm />
+          <QueueDisplay />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
